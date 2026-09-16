@@ -10,14 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="bilder/tentacle_skull.png">
+    <script src="nav.js" defer></script>
 </head>
 
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="charaktere.html">Charaktere</a>
-        <a href="regeln.html">Regeln</a>
-        <a href="kontakt.html">Kontakt</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-icon">&#9776;</span> Navigation
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="charaktere.html">Charaktere</a>
+            <a href="regeln.html">Regeln</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
     </nav>
     <header>
         <div id="hero_spielwelt">
@@ -67,10 +73,10 @@
         <img class="symbol" src="bilder/trenner5.png">
     </div>
 
-    <p class="subheader">Glossar</p>
+    <h2 class="subheader">Glossar</h2>
 
     <div id="circle">
-        <p class="subheader">Die Träume des wahnsinnigen Gottes</p>
+        <h3 class="subheader">Die Träume des wahnsinnigen Gottes</h3>
         <div class="top_txt">
             <p>
                 Die Realität ist hinüber. Wahnsinn sickert in unsere Welt.
@@ -85,7 +91,7 @@
         </div>
         <div class="row">
             <div>
-                <p class="subheader">Das Berlin-Paradox</p>
+                <h3 class="subheader">Das Berlin-Paradox</h3>
                 <p>
                     Je seltsamer etwas ist, desto mehr wird es von den Berlinern ignoriert.
                     Du könntest mit einem brennenden Dinosaurierkostüm durch die U8 rennen,
@@ -95,7 +101,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Verfluchtes Gold</p>
+                <h3 class="subheader">Verfluchtes Gold</h3>
                 <p>
                     Berliner Okkultisten zahlen mit verfluchtem Gold. Für Personen, die vom Mythos berührt worden sind,
                     scheinen die Münzen und Edelsteine, die sie zum Zahlen verwenden, harmlos zu sein.
@@ -106,7 +112,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Die Traumlande</p>
+                <h3 class="subheader">Die Traumlande</h3>
                 <p>
                     Neben der Realität, in der wir uns physisch befinden,
                     existiert noch eine weitere Realität, in der sich unser Verstand befindet.
@@ -121,7 +127,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Magie</p>
+                <h3 class="subheader">Magie</h3>
                 <p>
                     Magie existiert. Wenn du sie benutzt, wird sie dich verzehren.
                     Magie kann sowohl deinem Körper als auch deinem Geist Unaussprechliches antun.
@@ -134,7 +140,7 @@
         </div>
         <div class="row">
             <div>
-                <p class="subheader">Seltsame Wissenschaften</p>
+                <h3 class="subheader">Seltsame Wissenschaften</h3>
                 <p>
                     Manchen Forschern ist es gelungen, Okkultes mit Technologie zu verbinden.
                     Manche technologischen Errungenschaften der letzten Zeit sind so seltsam,
@@ -145,7 +151,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Der 3. Kataklysmus</p>
+                <h3 class="subheader">Der 3. Kataklysmus</h3>
                 <p>
                     Wir haben Anzeichen dafür gefunden, dass die Welt bereits zweimal untergegangen ist.
                     Manche halten die Träume des wahnsinnigen Gottes für ein Omen,
@@ -157,7 +163,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Lotus</p>
+                <h3 class="subheader">Lotus</h3>
                 <p>
                     Eine Pflanze aus einem vergangenen Zeitalter. Lotus kommt in verschiedenen Farben vor.
                     Er ist ein starkes Rauschmittel und kann je nach Farbe und Verarbeitung eine andere Wirkung haben.
@@ -167,7 +173,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Goldener Wein</p>
+                <h3 class="subheader">Goldener Wein</h3>
                 <p>
                     Goldener Wein wurde in den Ruinen eines verlassenen Zeitalters entdeckt. Er ist ein starkes
                     Rauschmittel, das einen wohligen Effekt hervorruft.
@@ -182,7 +188,7 @@
         </div>
         <div class="row">
             <div>
-                <p class="subheader">Alte Götzen</p>
+                <h3 class="subheader">Alte Götzen</h3>
                 <p>
                     Die Verehrung alter Gottheiten ist wieder aufgekommen. Es gibt eine Vielzahl von Kulten,
                     die alte Götter und Dämonen verehren. Nyarlathotep, Pazuzu, Shub-Niggurath, Lamaschtu, Ishtar,
@@ -193,7 +199,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Geheimgesellschaften</p>
+                <h3 class="subheader">Geheimgesellschaften</h3>
                 <p>
                     Der Esoterische Orden ist von Geheimgesellschaften durchzogen.
                     Um einige Beispiele zu nennen: Die Katakysmiker, welche die Apokalypse herbeisehnen.
@@ -205,7 +211,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Der Esoterische Orden</p>
+                <h3 class="subheader">Der Esoterische Orden</h3>
                 <p>
                     Der "Esoterische Orden" ist eine Art geheime Gesellschaft der Wissenden; allerdings ist diese Gesellschaft nicht
                     geeint, sondern eher zerstritten. Es ist eine lose Verbindung von Individuen,
@@ -215,7 +221,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Die Unheil-Bar</p>
+                <h3 class="subheader">Die Unheil-Bar</h3>
                 <p>
                     Diese Bar ist ein Treffpunkt für die Berliner Okkultisten.
                     Keiner weiß genau, wo sich die Unheil-Bar befindet.
@@ -225,10 +231,10 @@
                 </p>
             </div>
         </div>
-        <p class="subheader">Wichtige Personen</p>
+        <h2 class="subheader">Wichtige Personen</h2>
         <div class="row">
             <div>
-                <p class="subheader">Der maskierte Mann</p>
+                <h3 class="subheader">Der maskierte Mann</h3>
                 <p>
                     Der maskierte Mann besucht Menschen in ihren Träumen, um ihnen Arbeit anzubieten.
                     Er ist der HR-Manager einer unbekannten Firma.
@@ -238,7 +244,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">Der blinde Fritz</p>
+                <h3 class="subheader">Der blinde Fritz</h3>
                 <p>
                     Keiner weiß genau, wer der blinde Fritz ist, aber alle sind sich sicher, dass er inzwischen kein Mensch mehr ist.
                     Angeblich hat er einen regen Appetit auf Menschenfleisch.
@@ -249,7 +255,7 @@
                 </p>
             </div>
             <div>
-                <p class="subheader">JWD</p>
+                <h3 class="subheader">JWD</h3>
                 <p>
                     Keiner weiß, wer JWD ist; es wird aber vermutet, dass JWD kein Mensch ist, da es Signale aus dem Fornax-Cluster sendet.
                 </p>
@@ -264,7 +270,7 @@
     Nächste Geschichte: Kataklysmiker. Ort: Techno-Club. Lotus in den Getränken. Inspiration: Der schwarze Stein, KIZ-Filmriss.
     Schreib einen Text über alte Götter in Keilschrift.
  -->
-    <p class="subheader">Thunk!</p>
+    <h2 class="subheader">Thunk!</h2>
     <div class="top_txt">
 
         <p>
@@ -313,7 +319,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Irrwege</p>
+    <h2 class="subheader">Irrwege</h2>
     <div class="top_txt">
 
         <p>
@@ -347,7 +353,7 @@
         <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-            <p class="subheader">Falsche Riten</p>
+            <h2 class="subheader">Falsche Riten</h2>
     <div class="top_txt">
         <p>
             Langsam intonierst du die Worte in einer alten Sprache, die du selbst nicht verstehst. Du bist dir über den Ursprung der Sprache nicht sicher.
@@ -371,7 +377,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-        <p class="subheader">Nie wieder allein</p>
+        <h2 class="subheader">Nie wieder allein</h2>
     <div class="top_txt">
         <p>
             Deine Schritte hallen leise von den kargen Wänden des langen Flures wieder. Die Wände sind weiß. Der Boden ist minz-grün.

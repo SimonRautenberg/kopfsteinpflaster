@@ -14,7 +14,7 @@ header {
 }
 
 #hero_index {
-    background-image: url("bilder/banner.png");
+    background-image: url("bilder/ghoul.png");
     background-size:cover;
     background-position: center;
     min-height: 60vh;
@@ -22,7 +22,7 @@ header {
     background-attachment: fixed;
 }
 #hero_spielwelt {
-    background-image: url("bilder/marienkirche.jpg");
+    background-image: url("bilder/clutter.png");
     background-size:cover;
     background-position: center;
     min-height: 60vh;
@@ -30,7 +30,23 @@ header {
     background-attachment: fixed;
 }
 #hero_kontakt {
-    background-image: url("bilder/spree.jpg");
+    background-image: url("bilder/dreaming_cat.png");
+    background-size:cover;
+    background-position: center;
+    min-height: 60vh;
+    background-position: center-bottom;
+    background-attachment: fixed;
+}
+#hero_charaktere {
+    background-image: url("bilder/group.png");
+    background-size:cover;
+    background-position: center;
+    min-height: 60vh;
+    background-position: center-bottom;
+    background-attachment: fixed;
+}
+#hero_rules {
+    background-image: url("bilder/info_material.png");
     background-size:cover;
     background-position: center;
     min-height: 60vh;
@@ -111,6 +127,33 @@ nav a {
         border-bottom: 2px solid #95a5a6;
       }
 }
+
+.nav-toggle {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #95a5a6;
+    color: #ecf0f1;
+    font-family: Lato, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: color 0.5s, border-color 0.5s;
+}
+
+.nav-toggle:hover {
+    color: #95a5a6;
+    border-color: #95a5a6;
+}
+
+.nav-toggle-icon {
+    font-size: 18px;
+    line-height: 1;
+}
 .intro {
     padding-top: 5%;
     display: flex;
@@ -128,10 +171,20 @@ nav a {
     min-width: 300px;
 }
 
-#tor {
-    position: relative;
-    width: 45%;
-    height: 100%;
+.intro-picture {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-picture img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 #wiki_link{
@@ -194,112 +247,176 @@ ul{
        -1px 1px black;
 }
 
-.glitch
-  {
+#intro-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+
+#intro-overlay.visible {
+    display: flex;
+}
+
+#intro-popup {
+    background-color: black;
+    border: 1px solid #95a5a6;
+    max-width: 900px;
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 1.5% 4%;
+    text-align: center;
     position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('bilder/tor.jpg');
-    background-size: cover;
-  }
-
-.glitch:before
-  {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('bilder/tor.jpg');
-    background-size: cover; /* contain for split effect */
-    opacity: .5;
-    mix-blend-mode: hard-light;
-    animation: glitch2 10s linear infinite;
-  }
-
-.glitch:hover:before
-{
-	animation: glitch1 1s linear infinite;
 }
 
-@keyframes glitch1
-{
-	0%
-	{
-		background-position: 0 0;
-		filter: hue-rotate(0deg);
-	}
-	10%
-	{
-		background-position: 5px 0;
-	}
-	20%
-	{
-		background-position: -5px 0;
-	}
-	30%
-	{
-		background-position: 15px 0;
-	}
-	40%
-	{
-		background-position: -5px 0;
-	}
-	50%
-	{
-		background-position: -25px 0;
-	}
-	60%
-	{
-		background-position: -50px 0;
-	}
-	70%
-	{
-		background-position: 0 -20px;
-	}
-	80%
-	{
-		background-position: -60px -20px;
-	}
-	81%
-	{
-		background-position: 0 0;
-	}
-	100%
-	{
-		background-position: 0 0;
-		filter: hue-rotate(360deg);
-	}
+#intro-image {
+    max-width: 100%;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 8px auto;
 }
 
-@keyframes glitch2
-{
-	0%
-	{
-		background-position: 0 0;
-		filter: hue-rotate(0deg);
-	}
-	10%
-	{
-		background-position: 15px 0;
-	}
-	15%
-	{
-		background-position: -15px 0;
-	}
-	20%
-	{
-		filter: hue-rotate(360deg);
-	}
-  25%
-	{
-		background-position: 0 0;
-		filter: hue-rotate(0deg);
-	}
-  100%
-	{
-		background-position: 0 0;
-		filter: hue-rotate(0deg);
-	}
+#intro-popup h1 {
+    font-size: 32px;
+    padding-top: 0;
+    margin: 10px 0 4px;
+}
+
+#intro-keywords {
+    text-align: center;
+    color: #95a5a6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.intro-text {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 0 0 8px;
+}
+
+#intro-popup .row {
+    gap: 3%;
+}
+
+#intro-popup .row > div {
+    max-width: 30%;
+}
+
+#intro-popup .row .subheader {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+#intro-popup .row p {
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+#intro-close {
+    display: block;
+    margin: 16px auto 0;
+    background: none;
+    border: 1px solid #95a5a6;
+    color: #ecf0f1;
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: color 0.5s, border-color 0.5s;
+}
+
+#intro-close:hover {
+    color: #95a5a6;
+    border-color: #ecf0f1;
+}
+
+.contact_img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    max-width: 60vw;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    #hero_index, #hero_spielwelt, #hero_kontakt, #hero_charaktere, #hero_rules {
+        background-attachment: scroll;
+    }
+
+    nav {
+        padding-top: 20px;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: black;
+        padding: 10px 0 20px;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .intro {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .intro-picture {
+        width: 100%;
+    }
+
+    .intro > .text {
+        padding-right: 5%;
+    }
+
+    ul {
+        padding-left: 10%;
+        padding-right: 5%;
+    }
+
+    .bark, .top_txt {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .row > div, #intro-popup .row > div {
+        max-width: 90%;
+        flex: 1 1 100%;
+    }
+
+    #intro-popup {
+        padding: 4% 5%;
+    }
 }

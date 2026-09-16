@@ -10,17 +10,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="bilder/tentacle_skull.png">
+    <script src="nav.js" defer></script>
 </head>
 
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="spielwelt.html">Spielwelt</a>
-        <a href="regeln.html">Regeln</a>
-        <a href="kontakt.html">Kontakt</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-icon">&#9776;</span> Navigation
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="spielwelt.html">Spielwelt</a>
+            <a href="regeln.html">Regeln</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
     </nav>
     <header>
-        <h1>Charaktere</h1>
+        <div id="hero_charaktere">
+            <h1>Charaktere</h1>
+        </div>
     </header>
     <div class="top_txt">
         <p>
@@ -64,7 +72,7 @@
         <img class="symbol" src="bilder/trenner5.png">
     </div>
     <!--ich möchte Gruppierungen schaffen, damit die Spieler sich untereinander streiten können! keyword "emergence" -->
-    <p class="subheader">Geheimgesellschaften</p>
+    <h2 class="subheader">Geheimgesellschaften</h2>
     <div class="top_txt">
         <p>
             Jeder der Charaktere sollte einer dieser drei Geheimgesellschaften angehören,
@@ -76,7 +84,7 @@
     </div>
     <div class="row">
         <div>
-            <p class="subheader">Die Kataklysmiker</p>
+            <h3 class="subheader">Die Kataklysmiker</h3>
             <p>
                 Die Kataklysmiker möchten, dass alles endet, und Suizid ist für sie einfach nicht endgültig genug.
                 Die Welt brennend zu sehen zu wollen, ist für sie das Mindeste.
@@ -93,7 +101,7 @@
             </p>
         </div>
         <div>
-            <p class="subheader">Die Loge von Ulthar</p>
+            <h3 class="subheader">Die Loge von Ulthar</h3>
             <p>
                 <!-- hör dir die Katzen von Ulthar an-->
                 Die Loge von Ulthar ist strikt hierarchisch organisiert. Es gibt die Ränge: Sklave, Magus und
@@ -111,7 +119,7 @@
             </p>
         </div>
         <div>
-            <p class="subheader">Die Fornax</p>
+            <h3 class="subheader">Die Fornax</h3>
             <p>
                 Die Fornax sind nach dem gleichnamigen Sternbild benannt. Sie begrüßen Wandlung und Optimierung.
                 Sie glauben nicht an Magie, sondern an Wissenschaft und Technologie. Magie ist Wissenschaft,
@@ -128,7 +136,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Spezies</p>
+    <h2 class="subheader">Spezies</h2>
     <div class="top_txt">
         <p>
             Es ist ratsam, einen Menschen zu spielen oder etwas, das wie ein Mensch aussieht.
@@ -154,7 +162,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Profession</p>
+    <h2 class="subheader">Profession</h2>
            <div class="top_txt">
         <p>
             Überlege dir, was dein Charakter tut, um zu überleben.
@@ -170,7 +178,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Kurzkonzept</p>
+    <h2 class="subheader">Kurzkonzept</h2>
     <div class="top_txt">
         <p>
             Wenn du dir jetzt Gedanken über die Profession, die Spezies und die Geheimgesellschaft deines Charakters
@@ -183,7 +191,7 @@
         <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-        <p class="subheader">Erste Begegnung mit dem Okkulten</p>
+        <h2 class="subheader">Erste Begegnung mit dem Okkulten</h2>
     <div class="top_txt">
         <p>
             Ist dein Charakter schon einmal in Kontakt mit etwas Übernatürlichem gekommen? Wenn ja,
@@ -194,7 +202,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Wahnsinn</p>
+    <h2 class="subheader">Wahnsinn</h2>
     <div class="top_txt">
         <p>
             Wahnsinn ist ein Bestandteil des Spiels; dabei ist es wichtig, darauf zu achten, dass der Wahnsinn der
@@ -212,7 +220,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">("Hey Atze!...") Fähigkeiten</p>
+    <h2 class="subheader">("Hey Atze!...") Fähigkeiten</h2>
     <div class="top_txt">
         <p>
             In diesem Schritt der Charaktererstellung beschreiben wir die übernatürlichen Fähigkeiten deines Charakters.
@@ -226,7 +234,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Kurzgeschichte</p>
+    <h2 class="subheader">Kurzgeschichte</h2>
     <div class="top_txt">
         <p>
             Das Schreiben einer Kurzgeschichte ist Teil der Charaktererstellung.
@@ -250,7 +258,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Ziele</p>
+    <h2 class="subheader">Ziele</h2>
     <div class="top_txt">
         <p>
             Überlege dir, was dein Charakter möchte. Formuliere zwei kurzfristige Ziele und ein langfristiges Ziel.
@@ -264,7 +272,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Verknüpfungen</p>
+    <h2 class="subheader">Verknüpfungen</h2>
        <div class="top_txt">
         <p>
             Verknüpfungen sind Beziehungen zu anderen Charakteren.
@@ -275,7 +283,7 @@
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
-    <p class="subheader">Die Zerbrochenen</p>
+    <h2 class="subheader">Die Zerbrochenen</h2>
           <div class="top_txt">
         <p>
             Wenn du nur in das Spiel reinschnuppern möchtest, ist es nicht nötig, einen vollständigen Charakter zu erstellen.

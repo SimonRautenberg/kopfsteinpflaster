@@ -10,21 +10,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="bilder/tentacle_skull.png">
+    <script src="nav.js" defer></script>
 </head>
 
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="spielwelt.html">Spielwelt</a>
-        <a href="charaktere.html">Charaktere</a>
-        <a href="kontakt.html">Kontakt</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-icon">&#9776;</span> Navigation
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="spielwelt.html">Spielwelt</a>
+            <a href="charaktere.html">Charaktere</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
     </nav>
     <header>
-
-        <h1>Regeln</h1>
+        <div id="hero_rules">
+            <h1>Unsere Regeln</h1>
+        </div>
     </header>
     <!-- Safety-Mechanismen: Break and Cut!-->
-    <p class="subheader">Rule of Cool</p>
+    <h2 class="subheader">Rule of Cool</h2>
     <div class="top_txt">
         <p>
             Wir sind alle hier, um Spaß zu haben.<br><br>
@@ -42,7 +49,7 @@
     </div>
 
 
-    <p class="subheader">Break & Cut</p>
+    <h2 class="subheader">Break & Cut</h2>
     <div class="top_txt">
         <p>
             Break & Cut sind unsere Safety-Mechanismen. Wenn du dich unwohl fühlst und aus der Situation raus willst,
@@ -55,7 +62,7 @@
     </div>
 
 
-    <p class="subheader">"Hey, Atze!..."</p>
+    <h2 class="subheader">"Hey, Atze!..."</h2>
 
     <div class="top_txt">
         <p>
@@ -68,7 +75,7 @@
         </p>
     </div>
 
-    <p class="subheader">Slow Motion</p>
+    <h2 class="subheader">Slow Motion</h2>
     <div class="top_txt">
         <p>
             Unser Spiel hat auch Sword & Sorcery als Inspiration; da muss auch Action sein.
@@ -77,7 +84,7 @@
         </p>
     </div>
 
-    <p class="subheader">Das lange Messer</p>
+    <h2 class="subheader">Das lange Messer</h2>
     <div class="top_txt">
         <p>
             Das Spielkonzept sieht vor, dass manchmal draußen gespielt wird. Bitte verwendet keine Anscheinswaffen an öffentlichen Orten mit Uneingeweihten.
@@ -87,7 +94,7 @@
     </div>
 
 
-    <p class="subheader">"Knall"</p>
+    <h2 class="subheader">"Knall"</h2>
 
     <div class="top_txt">
         <p>
@@ -104,7 +111,7 @@
             <li>Exzessiver Konsum berauschender Substanzen. (Lotus und Goldener Wein zählen nicht, wenn sie für andere
                 Spieleffekte eingenommen werden.)</li>
         </ul>
-    <p class="subheader">Absturz</p>
+    <h2 class="subheader">Absturz</h2>
     <div class="top_txt">
         <p>
             Wenn du 5 Knall hast, bekommst du einen Absturz. Das ist ein akuter Kontrollverlust.
@@ -113,7 +120,7 @@
         </p>
     </div>
 
-    <p class="subheader">Münzwurf</p>
+    <h2 class="subheader">Münzwurf</h2>
 
     <div class="top_txt">
         <p>
@@ -125,15 +132,11 @@
             wenn nicht, eskaliert die Situation zum Negativen.
         </p>
     </div>
-
-    <p class="subheader"></p>
-
-    </div>
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
     <h2>Andere Meta-Techniken</h2>
-    <p class="subheader">Black Box</p>
+    <h3 class="subheader">Black Box</h3>
 
     <div class="top_txt">
         <p>
@@ -144,7 +147,7 @@
         </p>
     </div>
 
-    <p class="subheader">In Medias Res</p>
+    <h3 class="subheader">In Medias Res</h3>
     <div class="top_txt">
         <p>
             In Medias Res beschreibt eine Erzählweise, die direkt, ohne Umschweife, in die Mitte der Handlung führt.

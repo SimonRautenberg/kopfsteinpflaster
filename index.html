@@ -14,14 +14,53 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="bilder/tentacle_skull.png">
+    <script src="nav.js" defer></script>
 </head>
 
 <body>
+    <div id="intro-overlay">
+        <div id="intro-popup">
+            <h1>Kopfsteinpflaster</h1>
+            <p id="intro-keywords">Cthulhu &middot; Sword &amp; Sorcery &middot; Urban Fantasy</p>
+            <p class="intro-text">
+                Normalerweise besiegen die Helden den Kult, indem sie die Kultisten in einem
+                epischen Finale abstechen. Bei uns ist das erst das Intro.
+            </p>
+            <p class="intro-text">
+                Bei Cthulhu sind die Helden am Ende immer tot oder wahnsinnig.
+                Bei uns entdecken sie so die verborgene Welt.
+            </p>
+            <p class="intro-text">
+                Unser Setting ist modern: Wir benutzen technische Hilfsmittel wie Apps und QR-Codes.
+            </p>
+            <img id="intro-image" src="bilder/staby.png" alt="Staby">
+            <div class="row">
+                <div>
+                    <h3 class="subheader">Cthulhu</h3>
+                    <p>Unsere Urban Fantasy ist im Cthulhu-Mythos begründet. Fischmenschen und Verfluchte, anstelle von glitzernden Vampiren.</p>
+                </div>
+                <div>
+                    <h3 class="subheader">Sword &amp; Sorcery</h3>
+                    <p>Schnelle Geschichten mit moralischen Grauzonen. Blutig, brutal und seltsam.</p>
+                </div>
+                <div>
+                    <h3 class="subheader">Urban Fantasy</h3>
+                    <p>Unser Setting ist modern. Wir benutzen bewusst Technik in unserem Spiel.</p>
+                </div>
+            </div>
+            <button id="intro-close">Schließen</button>
+        </div>
+    </div>
     <nav>
-        <a href="spielwelt.html">Spielwelt</a>
-        <a href="charaktere.html">Charaktere</a>
-        <a href="regeln.html">Regeln</a>
-        <a href="kontakt.html">Kontakt</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-icon">&#9776;</span> Navigation
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="spielwelt.html">Spielwelt</a>
+            <a href="charaktere.html">Charaktere</a>
+            <a href="regeln.html">Regeln</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
     </nav>
     <header>
         <div id="hero_index">
@@ -90,18 +129,19 @@
                 und sogar Weird Fiction für unser Setting schreiben.
             </p>
         </div>
-        <div class="tor glitch" id="tor">
+        <div class="intro-picture">
+            <img src="bilder/door.png">
         </div>
     </div>
     <div class="paragraph">
         <img class="symbol" src="bilder/trenner5.png">
     </div>
     <div>
-        <p class="subheader">Das Setting von Kopfsteinpflaster setzt sich aus drei Inspirationsquellen zusammen:</p>
+        <h2 class="subheader">Das Setting von Kopfsteinpflaster setzt sich aus drei Inspirationsquellen zusammen:</h2>
     </div>
     <div class="row">
         <div>
-            <p class="subheader">Cthulhu-Mythos</p>
+            <h3 class="subheader">Cthulhu-Mythos</h3>
             <p>
                 Der Cthulhu-Mythos ist ein fiktives Universum von H.P. Lovecraft,
                 in dem uralte, mächtige Wesen wie Cthulhu, Nyarlathotep oder Yog-Sothoth
@@ -114,7 +154,7 @@
             </p>
         </div>
         <div>
-            <p class="subheader">Urban Fantasy</p>
+            <h3 class="subheader">Urban Fantasy</h3>
             <p>
                 Urban Fantasy ist ein Genre, in dem Magie,
                 übernatürliche Wesen und geheime Mächte in unserer modernen Welt existieren und
@@ -128,7 +168,7 @@
             </p>
         </div>
         <div>
-            <p class="subheader">Sword & Sorcery</p>
+            <h3 class="subheader">Sword & Sorcery</h3>
             <p>
                 Sword & Sorcery ist ein Subgenre der Fantasy, das sich auf Abenteuer,
                 Action und heroische Taten konzentriert. Es zeichnet sich durch eine düstere, oft brutale Welt aus,
@@ -178,11 +218,11 @@
         <img class="symbol" src="bilder/trenner5.png">
     </div>
     <div>
-        <p class="subheader">Wie wird gespielt?</p>
+        <h2 class="subheader">Wie wird gespielt?</h2>
     </div>
     <div class="row">
         <div>
-            <p class="subheader">Treffen</p>
+            <h3 class="subheader">Treffen</h3>
             <p>
                 Hier treffen sich Charaktere innerhalb einer sozialen Zusammenkunft. Das kann alles sein, was in die Spielwelt passt.
                 Eine Feierlichkeit, ein Ritual, eine Abstimmung, eine Verhandlung, ein Treffen in einer Bar. Diese Treffen können von Spieler*innen organisiert werden,
@@ -191,7 +231,7 @@
             </p>
         </div>
         <div>
-            <p class="subheader">Freies Spiel</p>
+            <h3 class="subheader">Freies Spiel</h3>
             <p>
                 Du kannst spielen, wann immer du willst. Es ist jederzeit möglich, sich mit anderen Spieler*innen zu treffen, um gemeinsam zu spielen.
                 Oft sind sogar die kleinen Szenen, die man nur zu zweit oder zu dritt auf einem kleinen Hinterhof spielt, die schönsten Szenen, weil sie sehr immersiv sind.
@@ -199,7 +239,7 @@
             </p>
         </div>
         <div>
-            <p class="subheader">Online</p>
+            <h3 class="subheader">Online</h3>
             <p>
                 Mit der SOURCE-Web-App hat unser Spiel eine Online-Komponente. In dieser App können "In Charakter" Spielinformationen online abgerufen werden.
                 Wenn dein Charakter eine schaffende Person ist, kann er gerne über einen ingame Feed verfügen.
@@ -217,6 +257,22 @@
     </div>
 </footer>
 
+<script>
+    if (!sessionStorage.getItem('introShown')) {
+        document.getElementById('intro-overlay').classList.add('visible');
+        sessionStorage.setItem('introShown', '1');
+    }
+    function closeIntro() {
+        document.getElementById('intro-overlay').classList.remove('visible');
+    }
+    document.getElementById('intro-close').addEventListener('click', closeIntro);
+    document.getElementById('intro-overlay').addEventListener('click', function (e) {
+        if (e.target.id === 'intro-overlay') closeIntro();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeIntro();
+    });
+</script>
 
 </body>
 
