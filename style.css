@@ -190,6 +190,64 @@ nav a {
 #wiki_link{
     color:red;
 }
+.map-intro{
+    width: 100%;
+    text-align: center;
+}
+.berlin-map-wrap{
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.berlin-map{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.bezirk{
+    fill: #3a3a3a;
+    stroke: #ecf0f1;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    cursor: pointer;
+    outline: none;
+    transition: fill 0.3s, stroke 0.3s;
+}
+.bezirk:hover,
+.bezirk:focus-visible{
+    fill: #7a1f1f;
+    stroke: red;
+}
+.bezirk.selected{
+    fill: red;
+    stroke: #ecf0f1;
+}
+.map-credit{
+    font-size: 10px;
+    color: #95a5a6;
+    font-family: Lato, sans-serif;
+    margin-top: 0;
+    text-align: right;
+    opacity: 0.6;
+}
+.bezirk-info{
+    margin: 5% auto 0;
+    max-width: 600px;
+    padding: 3% 4%;
+    border: 1px solid #95a5a6;
+    text-align: justify;
+}
+.bezirk-info h3{
+    text-align: center;
+    margin-top: 0;
+}
+.platzhalter-hinweis{
+    font-style: italic;
+    color: #95a5a6;
+    text-align: center;
+    font-size: 14px;
+}
 .bark{
     width: 70%;
     padding-left: 15%;
@@ -409,6 +467,15 @@ ul{
         width: 90%;
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    .berlin-map-wrap {
+        width: 92%;
+    }
+
+    .bezirk-info {
+        max-width: 100%;
+        padding: 5%;
     }
 
     .row > div, #intro-popup .row > div {
