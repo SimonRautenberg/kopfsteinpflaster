@@ -113,16 +113,22 @@ h2{
     pointer-events: none;
     text-shadow: none;
     opacity: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    /* falls die Überschrift eigenes padding hat (z.B. h1), zählt das sonst zur
+       Höhe dieser Layer mit rein und verschiebt die Bänder nach oben weg vom
+       Text — inherit + content-box lässt die Prozentwerte relativ zur reinen
+       Textzeile rechnen, unabhängig vom padding */
+    padding: inherit;
+    box-sizing: border-box;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0) content-box;
 }
 .glitch-heading::before{
     color: #ff2b4e;
-    clip-path: polygon(0 22%, 100% 18%, 97% 30%, 100% 27%, 0 34%);
+    clip-path: polygon(0 22%, 100% 18%, 97% 30%, 100% 27%, 0 34%) content-box;
     animation: heading-idle-red 6s linear infinite;
 }
 .glitch-heading::after{
     color: #26e0ff;
-    clip-path: polygon(0 58%, 100% 54%, 96% 66%, 100% 63%, 0 70%);
+    clip-path: polygon(0 58%, 100% 54%, 96% 66%, 100% 63%, 0 70%) content-box;
     animation: heading-idle-cyan 6s linear infinite;
 }
 .glitch-heading.glitching{
